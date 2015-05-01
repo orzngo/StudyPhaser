@@ -12,6 +12,7 @@
     "ect": "^0.5.9",
     "express": "~4.12.2",
     "morgan": "~1.5.1",
+    "phaser": "^2.3.0",
     "serve-favicon": "~2.2.0"
   }
 }
