@@ -14,6 +14,12 @@
     "typescript/phaser.d.ts": {
       "repo": "https://github.com/photonstorm/phaser.git",
       "ref": "63c9d2e88082cef5b702260d463647e1e348f4e3"
+    },
+    "gulp/gulp.d.ts": {
+      "ref": "1400e07731048ae841bcebed658cb68539cbfb99"
+    },
+    "gulp-typescript/gulp-typescript.d.ts": {
+      "ref": "1400e07731048ae841bcebed658cb68539cbfb99"
     }
   }
 }

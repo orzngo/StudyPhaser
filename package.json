@@ -14,5 +14,10 @@
     "morgan": "~1.5.1",
     "phaser": "^2.3.0",
     "serve-favicon": "~2.2.0"
+  },
+  "devDependencies": {
+    "gulp-webpack": "^1.4.0",
+    "typescript-require": "^0.2.8",
+    "webpack": "^1.8.11"
   }
 }
