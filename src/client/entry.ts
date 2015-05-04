@@ -5,4 +5,5 @@ var phaser = require("phaser");
 
 var img = require("../assets/img/char.png");
 
-alert("pooo");
+alert("hoo");
+console.log(img);
