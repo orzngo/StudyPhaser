@@ -19,8 +19,10 @@
     "balanced-match": "^0.2.0",
     "concat-map": "0.0.1",
     "gulp": "^3.8.11",
+    "gulp-typescript": "^2.6.0",
     "gulp-uglify": "^1.2.0",
     "gulp-webpack": "^1.4.0",
+    "pixi": "^0.2.1",
     "typescript-require": "^0.2.8",
     "url-loader": "^0.5.5",
     "webpack": "^1.8.11"

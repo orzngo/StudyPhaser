@@ -15,8 +15,8 @@ var tsProject = ts.createProject({
 
 
 
-gulp.task('webpack', () => {
-  gulp.src("./src/client/entry.ts")
+gulp.task('webpack', ["tsc:client"], () => {
+  gulp.src("./src/client/entry.js")
     .pipe(webpack(require("./webpack.config.js")))
     .pipe(gulp.dest("./release/public/js"));
 });
@@ -24,6 +24,12 @@ gulp.task('webpack', () => {
 gulp.task('copy:template', () => {
   gulp.src("./src/server/views/**/*.ect")
     .pipe(gulp.dest("./release/server/views"));
+});
+
+
+gulp.task("tsc:client", () => {
+  return gulp.src("./src/client/entry.ts")
+    .pipe(ts(tsProject));
 });
 
 gulp.task("default", ["webpack"], () => {});
