@@ -28,8 +28,9 @@ gulp.task('copy:template', () => {
 
 
 gulp.task("tsc:client", () => {
-  return gulp.src("./src/client/entry.ts")
-    .pipe(ts(tsProject));
+  return gulp.src("./src/client/**/*.ts")
+    .pipe(ts(tsProject))
+    .pipe(gulp.dest("./src/client"));
 });
 
 gulp.task("default", ["webpack"], () => {});

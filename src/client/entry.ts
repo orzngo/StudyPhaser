@@ -12,4 +12,4 @@ win.PIXI = pixi;
 var img = require("../assets/img/char.png");
 
 alert("hoo");
-console.log(img);
+alert(img);
