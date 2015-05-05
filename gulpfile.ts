@@ -18,7 +18,10 @@ var tsProject = ts.createProject({
 gulp.task('webpack', ["tsc:client"], () => {
   gulp.src("./src/client/entry.js")
     .pipe(webpack(require("./webpack.config.js")))
-    .pipe(gulp.dest("./release/public/js"));
+    .pipe(gulp.dest("./release/public/game"));
+
+  gulp.src("./src/client/lib/**/*.js")
+    .pipe(gulp.dest("./release/public/game/lib"));
 });
 
 gulp.task('copy:template', () => {
