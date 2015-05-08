@@ -8,7 +8,7 @@ module.exports = {
       {
       test: /\.(jpe?g|png|gif|svg)$/i,
       loaders: [
-        'url?limit=10'
+        "file?name=[hash].[ext]"
       ]}
     ]
   }
