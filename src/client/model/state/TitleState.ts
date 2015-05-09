@@ -16,7 +16,6 @@ class TitleState extends Phaser.State {
   }
 
   public create():void {
-    console.log("asset loaded.");
     this.game.state.start(GameState.NAME);
   }
 
