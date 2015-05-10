@@ -8,7 +8,7 @@ class Game {
   private _game:Phaser.Game; 
 
   constructor() {
-    this._game = new Phaser.Game(800, 600, Phaser.AUTO, 'game');
+    this._game = new Phaser.Game(640, 480, Phaser.AUTO, 'game');
     this._game.state.add(TitleState.NAME, new TitleState());
     this._game.state.add(GameState.NAME, new GameState());
 
