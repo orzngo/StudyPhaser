@@ -1,8 +1,8 @@
 ///<reference path="../../typings/node/node.d.ts" />
 ///<reference path="../../typings/phaser/phaser.d.ts" />
 
-import TitleState = require("./model/state/TitleState");
-import GameState = require("./model/state/GameState");
+import TitleState = require("./core/state/TitleState");
+import GameState = require("./core/state/GameState");
 
 class Game {
   private _game:Phaser.Game; 
