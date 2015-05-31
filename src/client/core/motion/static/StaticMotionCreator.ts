@@ -12,7 +12,7 @@ class StaticMotionCreator {
   public create(line:Line): StaticMotion {
     var points: IMotionPoint[] = [];
 
-    for (var i = 0; i < 1; i+= 1 / 300) {
+    for (var i = 0; i < 1; i+= 1 / 1200) {
       var point:IMotionPoint = {angle:0, x: 0, y: 0};
 
       switch (line.type) {

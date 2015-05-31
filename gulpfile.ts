@@ -36,4 +36,8 @@ gulp.task("tsc:client", () => {
     .pipe(gulp.dest("./src/client"));
 });
 
+gulp.task("watch", () => {
+  gulp.watch("./src/client/**/*.ts", ["webpack"]);
+});
+
 gulp.task("default", ["webpack"], () => {});

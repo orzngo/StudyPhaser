@@ -10,6 +10,7 @@ class MotionObject extends Phaser.Sprite{
   public initialize (status: MotionStatus, useAngle:boolean = false) {
     this._motionStatus = status;
     this._useAngle = useAngle;
+    this.reset(this.x, this.y);
   }
 
   public reset(x:number, y:number, health:number = 0): Phaser.Sprite {
@@ -18,7 +19,6 @@ class MotionObject extends Phaser.Sprite{
   }
 
   public update(): void {
-    console.log("moveobject");
     if (!this._motionStatus) {
       throw new Error("Not initialized.");
     }

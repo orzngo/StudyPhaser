@@ -11,13 +11,15 @@ class MotionStatus {
 
   // 直近の計算結果。内部計算用のキャッシュ
   private _recentPoint: IMotionPoint;
+  // 現在の座標
+  private _currentPoint: IMotionPoint;
+  // 始点の座標
+  private _startPoint: IMotionPoint;
 
   // 現在どのモーションを再生しているか
   private _currentMotion: number = 0;
   // 現在モーションのどこを再生しているか
   private _currentStep: number = 0;
-  // 現在の座標
-  private _currentPoint: IMotionPoint;
 
   private _loop: boolean = false;
   private _finished: boolean = false;
@@ -90,13 +92,15 @@ class MotionStatus {
     } else {
       this._currentStep += this._speed;
     }
-
     return this._currentPoint;
   }
 
   public reset(point: IMotionPoint): void {
     this._currentPoint = point;
-    this._recentPoint = point;
+    this._recentPoint = {x:0, y:0, angle:0};
+    this._startPoint = point;
+    this._currentStep = 0;
+    this._currentMotion = 0;
   }
 
 
