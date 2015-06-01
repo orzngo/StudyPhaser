@@ -2,15 +2,21 @@
 ///<reference path="../../../../typings/phaser/phaser.d.ts" />
 
 import MotionStatus = require("../motion/MotionStatus");
+import IMotionObjectInitializeParams = require("./IMotionObjectInitializeParams");
 
 class MotionObject extends Phaser.Sprite{
   private _motionStatus: MotionStatus;
   private _useAngle: boolean;
 
-  public initialize (status: MotionStatus, useAngle:boolean = false) {
-    this._motionStatus = status;
-    this._useAngle = useAngle;
-    this.reset(this.x, this.y);
+  public initialize (params: IMotionObjectInitializeParams) {
+    this._motionStatus = params.status;
+    this._useAngle = (params.useAngle);
+    this._motionStatus.speed = (params.speed) ? params.speed : 1;
+    this.x = params.startPoint.x;
+    this.y = params.startPoint.y;
+    this.angle = params.startPoint.angle;
+
+    this.reset(this.x, this.y, params.health);
   }
 
   public reset(x:number, y:number, health:number = 0): Phaser.Sprite {
