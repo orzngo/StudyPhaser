@@ -1,6 +1,11 @@
 # StudyPhaser
 Phaser勉強用にSTG
 
+# ビルドほうほう
+dtsm install
+npm install
+gulp
+
 # ライセンス
 MIT
 
