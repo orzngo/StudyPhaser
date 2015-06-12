@@ -1,4 +1,5 @@
 src/**/*.js
+!src/client/libs/**/*.js
 node_modules
 typings
 release

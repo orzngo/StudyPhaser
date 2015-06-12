@@ -15,13 +15,16 @@ var tsProject = ts.createProject({
 
 
 
-gulp.task('webpack', ["tsc:client"], () => {
+gulp.task('webpack', ["tsc:client", "copy:libs"], () => {
   gulp.src("./src/client/entry.js")
     .pipe(webpack(require("./webpack.config.js")))
     .pipe(gulp.dest("./release/public/game"));
 
-  gulp.src("./src/client/lib/**/*.js")
-    .pipe(gulp.dest("./release/public/game/lib"));
+});
+
+gulp.task('copy:libs', () => {
+  gulp.src("./src/client/libs/**/*.js")
+    .pipe(gulp.dest("./release/public/game/libs"));
 });
 
 gulp.task('copy:template', () => {
