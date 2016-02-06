@@ -5,6 +5,11 @@ import Line = require("./Line");
 import StaticMotion = require("./StaticMotion");
 import IMotionPoint = require("../IMotionPoint");
 
+/**
+ * Lineを与えるとStaticMotionを生成するクラス。
+ * Lineは任意の２次元座標の配列
+ * Lineでは直線の集合しか定義できないが、このクラスでそれを元にした曲線に変換できる
+ */
 class StaticMotionCreator {
   constructor (){
   }

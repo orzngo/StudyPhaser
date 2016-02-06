@@ -4,6 +4,9 @@
 import TitleState = require("./core/state/TitleState");
 import GameState = require("./core/state/GameState");
 
+/**
+ * エントリーポイント的なもの
+ */
 class Game {
   private _game:Phaser.Game; 
 

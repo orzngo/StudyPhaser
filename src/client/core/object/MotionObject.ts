@@ -4,6 +4,10 @@
 import MotionStatus = require("../motion/MotionStatus");
 import IMotionObjectInitializeParams = require("./IMotionObjectInitializeParams");
 
+/**
+ * 画面上を動き回るすべてのオブジェクトの基底クラス
+ * いまのところ、敵とアイテムくらいしか思い浮かばない。
+ */
 class MotionObject extends Phaser.Sprite{
   private _motionStatus: MotionStatus;
   private _useAngle: boolean;

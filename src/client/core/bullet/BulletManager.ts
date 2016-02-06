@@ -1,6 +1,9 @@
 ///<reference path="../../../../typings/node/node.d.ts" />
 ///<reference path="../../../../typings/phaser/phaser.d.ts" />
 
+/**
+ * 自機の弾発射をコントロールするクラス
+ */
 class BulletManager {
   private _shotTime:number = 0;
   private _level:number = 5;
@@ -8,6 +11,7 @@ class BulletManager {
   private _shotRotateDeg:number[] = [ 0, -10, 10, -20, 20];
 
   constructor(private _group:Phaser.Group, private _max:number = 30) {
+    //TODO:この辺弾自身を作っているので、MyBulletみたいなクラスに移管
     _group.enableBody = true;
     _group.physicsBodyType = Phaser.Physics.ARCADE;
     _group.createMultiple(30, 'myShot');

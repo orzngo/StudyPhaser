@@ -1,6 +1,9 @@
 ///<reference path="../../../../../typings/node/node.d.ts" />
 ///<reference path="../../../../../typings/phaser/phaser.d.ts" />
 
+/**
+ * 任意の二次元座標の配列。StaticMotionCreatorに渡す
+ */
 class Line {
   public static TYPE_LINEAR = "linear";
   public static TYPE_SPLINE = "spline"

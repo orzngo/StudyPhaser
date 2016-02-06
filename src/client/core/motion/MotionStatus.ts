@@ -4,8 +4,11 @@
 import IMotion = require("./IMotion");
 import IMotionPoint = require("./IMotionPoint");
 
-//各インスタンスが持つ、モーションを管理するクラス
 
+/**
+ * モーションを管理する機能を持つクラス。各MotionObjectインスタンスは
+ * このクラスのインスタンスを持ち、自分が持つモーションの再生、遷移をこいつにやってもらう
+ */
 class MotionStatus {
   private _speed: number = 1;
 
@@ -28,6 +31,7 @@ class MotionStatus {
   private _reverseY: boolean = false;
 
   // モーション再生開始前に待つフレーム
+  //TODO:ディレイ対応
   private _delay: number = 0;
 
 
@@ -50,6 +54,7 @@ class MotionStatus {
     var result = motion.get(this._currentStep);
     // 直近の座標との差分を出す。
     // TODO:角度の扱い。軸反転時に定数をangleに増減させればよさそう
+    // TODO:モーションを逆から再生できるようにする
     var diff:IMotionPoint = {
       x: result.x - this._recentPoint.x,
       y: result.y - this._recentPoint.y,
