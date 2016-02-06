@@ -26,21 +26,6 @@ class GameState extends Phaser.State {
     this._keys = this.game.input.keyboard.createCursorKeys();
     this._fireButton = this.game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
 
-    
-    var creator = new StaticMotionCreator();
-    var line = new Line([{x:0,y:0}, {x:100,y:200}, {x:50, y:-300}, {x:600, y:250}, {x:200, y:20}], Line.TYPE_SPLINE);
-    var motion = creator.create(line);
-
-    var enemy = new MotionObject(this.game, 0, 100, 'char', 0);
-    enemy.initialize(new MotionStatus([motion]));
-    this.game.world.add(enemy);
-
-    var enemy2 = new MotionObject(this.game, -200, 300, 'char', 0);
-    enemy2.initialize(new MotionStatus([motion]));
-    this.game.world.add(enemy2);
-    var enemy3 = new MotionObject(this.game, 0, 400, 'char', 0);
-    enemy3.initialize(new MotionStatus([motion]));
-    this.game.world.add(enemy3);
   }
 
   public update() : void {
